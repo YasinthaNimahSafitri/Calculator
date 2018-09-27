@@ -16,7 +16,6 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
         private float Penambahan(float a, float b)
         {
             return a + b;
@@ -36,10 +35,31 @@ namespace WindowsFormsApp1
         {
             return a / b;
         }
+        private void Operasi_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+            float a = float.Parse(textBox1.Text);
+            float b = float.Parse(textBox2.Text);
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    textBox3.Text = Convert.ToString(Penambahan(a, b));
+                    break;
+                case 1:
+                    textBox3.Text = Convert.ToString(Pengurangan(a, b));
+                    break;
+                case 2:
+                    textBox3.Text = Convert.ToString(Perkalian(a, b));
+                    break;
+                case 3:
+                    textBox3.Text = Convert.ToString(Pembagian(a, b));
+                    break;
+            }
+            }
         }
     }
-}
